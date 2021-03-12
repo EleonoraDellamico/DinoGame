@@ -57,6 +57,10 @@ document.addEventListener('DOMContentLoaded', () => {
 				clearInterval(timerId);
 				alert.innerHTML = 'Game Over';
 				isGameOver = true;
+				//remove all children
+				while (grid.firstChild) {
+					grid.removeChild(grid.lastChild);
+				}
 			}
 
 			obstaclePosition -= 10;
